@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="ltr" lang="tr" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="ltr" lang="tr" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="ltr" lang="tr">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your Store</title>
+    <base href="https://www.greenmall.websunum.com.tr/" />
+    <meta name="description" content="Your store of fun" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="catalog/view/theme/nar/stylesheet/stylesheet.css" rel="stylesheet">
+
+    <link href="catalog/view/javascript/jquery/swiper/css/swiper.min.css" type="text/css" rel="stylesheet"
+        media="screen" />
+    <link href="catalog/view/javascript/jquery/swiper/css/opencart.css" type="text/css" rel="stylesheet"
+        media="screen" />
+    <script src="catalog/view/javascript/jquery/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+    <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+    <link href="https://www.greenmall.websunum.com.tr/image/catalog/cart.png" rel="icon" />
+</head>
+
+<body>
+    <style>
+        /*MEGA MENU ege*/
+        .menu-has-sub{
+            cursor: pointer;
+        }
+        .main-sub-menu {
+            position: fixed;
+            background: var(--white, #FFF);
+            width: 100%;
+            padding: 0 0 0 0;
+            top: 208px;
+            left: 0;
+            right: 0;
+            height:0;
+            overflow: hidden;
+            transition: 0.3s all;
+        }
+        .main-sub-menu:hover,.menu-has-sub:hover .main-sub-menu {
+            padding: 45px 0 42px 0;
+            height: auto;
+        }
+        .main-sub-menu ul li {
+            list-style-type: none;
+        }
+
+        .main-sub-menu-left {
+            width:22%;
+            border-right: 1px solid #CED4DA;
+            padding: 0;
+        }
+
+        .main-sub-menu-right {
+            width:78%;
+            padding: 0 0 0 50px;
+            height: 303px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .main-sub-menu-left ul{
+           padding: 0 0 0 0;
+        }
+        .main-sub-menu-left ul li{
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+
+        .main-sub-menu-left ul li .mm-icon{
+            width: 30px;
+            margin: 0 20px 0 0;
+        }
+        .main-sub-menu-left ul li .mm-icon img{
+            width: 100%;
+        }
+        .main-sub-menu-left ul li:last-child {
+            margin: 0 0 0 0;
+        }
+
+        .main-sub-menu-left ul li a {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            color: var(--gray-800, #495057);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            text-transform: capitalize;
+            text-shadow: 0px 0 0 rgba(0, 0, 0, 0);
+            transition: 0.3s all;
+        }
+        .main-sub-menu-left ul li:hover a{
+            color:#FE5000;
+        }
+        .menu-has-sub{
+            position: relative;
+        }
+        .main-sub-menu-right ul{
+          margin-bottom: 30px;
+          padding-left:0;
+        }
+        .main-sub-menu-right ul li{
+            width:100%;
+        }
+        .main-sub-menu-right ul li:first-child{
+          margin:0 0 10px 0;
+        }
+        .main-sub-menu-right ul li a{
+            color: var(--gray-700, #6C757D);        
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px; /* 210% */
+            text-transform: capitalize;
+            text-shadow: 0px 0 0 rgba(0, 0, 0, 0);
+            transition: 0.3s all;
+        }
+        .main-sub-menu-right ul li:first-child a{
+            color: var(--gray-900, #000B15);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px; /* 166.667% */
+        }
+        .main-sub-menu-right ul li:hover a{
+            color:#FE5000;
+        }
+    
+        @media(max-width:991px){
+            .main-sub-menu-left {
+                width: 100%;
+            border-right: 0px solid #CED4DA;
+            margin-bottom:10px;
+        }    
+        .main-sub-menu-right {
+                width: 100%;
+                padding-left:0;
+        }    
+        .main-sub-menu-left ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;margin-bottom: 0;
+}
+        .main-sub-menu-left ul li {
+    width: auto;
+    margin: 0 10px 20px 0;
+}
+.main-sub-menu-left ul li:last-child {
+   margin-right: 0px;
+}
+.main-sub-menu-left ul li .mm-icon {
+    width: 20px;
+    margin: 0 5px 0 0;
+}
+.main-sub-menu-left ul li .mm-icon img{
+    max-width: 100%;
+}
+
+
+        }
+        @media (max-width:767px){
+            .main-sub-menu-left ul li{
+    width:33%;
+    margin-right:0;
+    padding-right:5px;
+}
+        }
+        @media (max-width:560px){
+            .main-sub-menu-left ul li{
+    width:50%;
+}
+        }
+        @media(max-width:480px){
+            .main-sub-menu-right {
+    height: 347px;
+}
+        }
+    </style>
+    <div class="cssload-loader">
+        <div class="css-loader-logo">
+            <img src="/catalog/view/theme/nar/image/butterfly-loading.gif" />
+        </div>
+    </div>
+    <div class="header">
+        <div class="container-fluid p-0">
+            <div class="yazi text-white">
+                <p>100₺ ve Üzeri Alışverişlerinizde Kargo Ücretsiz</p>
+            </div>
+        </div>
+        <div class="container-fluid p-0 swipe-text">
+            <p class="infinite-text">
+                <span>NATURE UP YOUR LIFE • NATURE UP YOUR LIFE • NATURE UP YOUR LIFE •
+                    NATURE UP YOUR LIFE • NATURE UP YOUR LIFE • NATURE UP YOUR LIFE •
+                    NATURE UP YOUR LIFE • NATURE UP YOUR LIFE • NATURE UP YOUR LIFE •
+                    NATURE UP YOUR LIFE • NATURE UP YOUR LIFE • NATURE UP YOUR LIFE •
+                    &nbsp;</span>
+            </p>
+        </div>
+
+        <div class="container-fluid header-menu ">
+            <div class="row menu">
+                <div class="col-3 logo">
+                    <a href="https://www.greenmall.websunum.com.tr/index.php?route=common/home">
+                        <img src="https://www.greenmall.websunum.com.tr/image/catalog/logo.png" title="GreenMall"
+                            alt="GreenMall" class="resim" />
+                    </a>
+
+                </div>
+                <div class="col-2 icons">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook fa-lg"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-youtube fa-lg"></i>
+                    </a>
+                </div>
+                <div class="col-2 bar">
+                    <form>
+                        <input class="search-bar" type="text" placeholder="Ara...">
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass arama"></i>
+                        </a>
+                    </form>
+                </div>
+                <div class="col-2 location">
+                    <a href="#"><i class="fa-solid fa-location-dot"></i>Satış Noktalarımız</a>
+                </div>
+                <div class="col-3 right">
+                    <a href="https://www.greenmall.websunum.com.tr/index.php?route=account/login"><i
+                            class="fa-regular fa-user"></i><span>Oturum Aç</span></a>
+                    <a href="https://www.greenmall.websunum.com.tr/index.php?route=account/register"><i
+                            class="fa-regular fa-user"></i><span>Kayıt Ol</span></a>
+
+
+
+                </div>
+            </div>
+            <div class="container-fluid kategori">
+                <span class="menu-has-sub"><a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=59" title="İÇ MEKAN">İÇ MEKAN</a>
+                    <div class="main-sub-menu">
+                        <div class="container">
+                            <div class="row">
+                                <div class="main-sub-menu-left">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="İç Mekan Anasayfa">
+                                                <div class="mm-icon">
+                                                    <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/ic-mekan-ana-sayfa-mm.png" alt="İç Mekan Anasayfa" />
+                                                </div>
+                                                <span>İç Mekan Anasayfa</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Yeni Gelenler">
+                                                <div class="mm-icon">
+                                                    <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/yeni-gelenler-mm.png" alt="Yeni Gelenler" />
+                                                </div>
+                                                <span>Yeni Gelenler</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Çok Satanlar">
+                                                <div class="mm-icon">
+                                                    <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/cok-satanlar-mm.png" alt="Çok Satanlar" />
+                                                </div>
+                                                <span>Çok Satanlar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="İndirimli Ürünler">
+                                                <div class="mm-icon">
+                                                    <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/indirimli-urunler-mm.png" alt="İndirimli Ürünler" />
+                                                </div>
+                                                <span>İndirimli Ürünler</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Hediye Önerileri">
+                                                <div class="mm-icon">
+                                                    <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/hediye-urunleri-mm.png" alt="Hediye Önerileri" />
+                                                </div>
+                                                <span>Hediye Önerileri</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="main-sub-menu-right">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Saksı & Sepetler">Saksı & Sepetler</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Fiber Saksılar ">Fiber Saksılar </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Hasır saksılar">Hasır saksılar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Mıknatıslı Saksılar">Mıknatıslı Saksılar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Seramik Saksılar">Seramik Saksılar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Plastik Saksılar">Plastik Saksılar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Beton Saksılar">Beton Saksılar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Ahşap Saksılar">Ahşap Saksılar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Askılı Saksılar">Askılı Saksılar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Masaüstü Saksıları">Masaüstü Saksıları</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Mercan Saksılar">Mercan Saksılar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Mika Saksılar">Mika Saksılar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Sky Planner">Sky Planner</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="T basket">T basket</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Bitkiler">Bitkiler</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Bitkiler">Bitkiler</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Teraryum">Teraryum</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Torf">Torf</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Gemici Fenerleri">Gemici Fenerleri</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Mobilya Depolama">Mobilya Depolama</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Sehpa">Sehpa</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Koltuk">Koltuk</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Aksesuarlar">Aksesuarlar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Mumluklar">Mumluklar</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Dekoratif Objeler">Dekoratif Objeler</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Şişeler Vazolar">Şişeler Vazolar</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Şömine">Şömine</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Bioethanol şöminer">Bioethanol şöminer</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+               
+                    <span class="menu-has-sub"><a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=98" title="DIŞ MEKAN">DIŞ MEKAN</a>
+                        <div class="main-sub-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="main-sub-menu-left">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Dış Mekan Anasayfa">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/dis-mekan-ana-sayfa-mm.png" alt="Dış Mekan Anasayfa" />
+                                                    </div>
+                                                    <span>Dış Mekan Anasayfa</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Yeni Gelenler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/yeni-gelenler-mm.png" alt="Yeni Gelenler" />
+                                                    </div>
+                                                    <span>Yeni Gelenler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Çok Satanlar">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/cok-satanlar-mm.png" alt="Çok Satanlar" />
+                                                    </div>
+                                                    <span>Çok Satanlar</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="İndirimli Ürünler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/indirimli-urunler-mm.png" alt="İndirimli Ürünler" />
+                                                    </div>
+                                                    <span>İndirimli Ürünler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Hediye Önerileri">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/hediye-urunleri-mm.png" alt="Hediye Önerileri" />
+                                                    </div>
+                                                    <span>Hediye Önerileri</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="main-sub-menu-right">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Saksı & Sepetler">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Güneş Saati">Güneş Saati</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Heykeller">Heykeller</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Meyve Objeleri">Meyve Objeleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Objeler">Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Posta Kutuları">Posta Kutuları</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Rüzgar Gülleri">Rüzgar Gülleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Süs Havuzlar">Süs Havuzlar</a>
+                                            </li>
+                                           
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gazlı Mumlar">Gazlı Mumlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gemici Fenerleri">Gemici Fenerleri</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Mobilya Depolama">Mobilya Depolama</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Sehpa">Sehpa</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Koltuk">Koltuk</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aksesuarlar">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Dekoratif Objeler">Dekoratif Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Şişeler Vazolar">Şişeler Vazolar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Şömine">Şömine</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bioethanol şöminer">Bioethanol şöminer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="menu-has-sub"><a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=185" title="BAHÇE">BAHÇE</a>
+                        <div class="main-sub-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="main-sub-menu-left">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Bahçe Anasayfa">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/bahce-ana-sayfa-mm.png" alt="Bahçe Anasayfa" />
+                                                    </div>
+                                                    <span>Bahçe Anasayfa</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Yeni Gelenler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/yeni-gelenler-mm.png" alt="Yeni Gelenler" />
+                                                    </div>
+                                                    <span>Yeni Gelenler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Çok Satanlar">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/cok-satanlar-mm.png" alt="Çok Satanlar" />
+                                                    </div>
+                                                    <span>Çok Satanlar</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="İndirimli Ürünler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/indirimli-urunler-mm.png" alt="İndirimli Ürünler" />
+                                                    </div>
+                                                    <span>İndirimli Ürünler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Hediye Önerileri">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/hediye-urunleri-mm.png" alt="Hediye Önerileri" />
+                                                    </div>
+                                                    <span>Hediye Önerileri</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="main-sub-menu-right">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Saksı & Sepetler">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Güneş Saati">Güneş Saati</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Heykeller">Heykeller</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Meyve Objeleri">Meyve Objeleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Objeler">Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Posta Kutuları">Posta Kutuları</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Rüzgar Gülleri">Rüzgar Gülleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Süs Havuzlar">Süs Havuzlar</a>
+                                            </li>
+                                           
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gazlı Mumlar">Gazlı Mumlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gemici Fenerleri">Gemici Fenerleri</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Mobilya Depolama">Mobilya Depolama</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Sehpa">Sehpa</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Koltuk">Koltuk</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aksesuarlar">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Dekoratif Objeler">Dekoratif Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Şişeler Vazolar">Şişeler Vazolar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Şömine">Şömine</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bioethanol şöminer">Bioethanol şöminer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="menu-has-sub"><a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=189" title="EVCİL DOSTLAR">EVCİL DOSTLAR</a>
+                        <div class="main-sub-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="main-sub-menu-left">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Evcil Dostlar Anasayfa">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/evcil-dostlar-ana-sayfa-mm.png" alt="Evcil Dostlar Anasayfa" />
+                                                    </div>
+                                                    <span>Evcil Dostlar Anasayfa</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Yeni Gelenler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/yeni-gelenler-mm.png" alt="Yeni Gelenler" />
+                                                    </div>
+                                                    <span>Yeni Gelenler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Çok Satanlar">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/cok-satanlar-mm.png" alt="Çok Satanlar" />
+                                                    </div>
+                                                    <span>Çok Satanlar</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="İndirimli Ürünler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/indirimli-urunler-mm.png" alt="İndirimli Ürünler" />
+                                                    </div>
+                                                    <span>İndirimli Ürünler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Hediye Önerileri">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/hediye-urunleri-mm.png" alt="Hediye Önerileri" />
+                                                    </div>
+                                                    <span>Hediye Önerileri</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="main-sub-menu-right">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Saksı & Sepetler">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Güneş Saati">Güneş Saati</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Heykeller">Heykeller</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Meyve Objeleri">Meyve Objeleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Objeler">Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Posta Kutuları">Posta Kutuları</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Rüzgar Gülleri">Rüzgar Gülleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Süs Havuzlar">Süs Havuzlar</a>
+                                            </li>
+                                           
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gazlı Mumlar">Gazlı Mumlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gemici Fenerleri">Gemici Fenerleri</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Mobilya Depolama">Mobilya Depolama</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Sehpa">Sehpa</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Koltuk">Koltuk</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aksesuarlar">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Dekoratif Objeler">Dekoratif Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Şişeler Vazolar">Şişeler Vazolar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Şömine">Şömine</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bioethanol şöminer">Bioethanol şöminer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="menu-has-sub"><a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=213" title="TEKNE VE DENİZ EKİPMANLARI">TEKNE VE DENİZ EKİPMANLARI</a>
+                        <div class="main-sub-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="main-sub-menu-left">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Tekne ve Deniz Ekipmanları Anasayfa">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/tekne-ve-deniz-ekipmanlari-ana-sayfa-mm.png" alt="Tekne ve Deniz Ekipmanları Anasayfa" />
+                                                    </div>
+                                                    <span>Tekne ve Deniz Ekipmanları Anasayfa</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Yeni Gelenler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/yeni-gelenler-mm.png" alt="Yeni Gelenler" />
+                                                    </div>
+                                                    <span>Yeni Gelenler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Çok Satanlar">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/cok-satanlar-mm.png" alt="Çok Satanlar" />
+                                                    </div>
+                                                    <span>Çok Satanlar</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="İndirimli Ürünler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/indirimli-urunler-mm.png" alt="İndirimli Ürünler" />
+                                                    </div>
+                                                    <span>İndirimli Ürünler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Hediye Önerileri">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/hediye-urunleri-mm.png" alt="Hediye Önerileri" />
+                                                    </div>
+                                                    <span>Hediye Önerileri</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="main-sub-menu-right">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Saksı & Sepetler">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Güneş Saati">Güneş Saati</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Heykeller">Heykeller</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Meyve Objeleri">Meyve Objeleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Objeler">Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Posta Kutuları">Posta Kutuları</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Rüzgar Gülleri">Rüzgar Gülleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Süs Havuzlar">Süs Havuzlar</a>
+                                            </li>
+                                           
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gazlı Mumlar">Gazlı Mumlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gemici Fenerleri">Gemici Fenerleri</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Mobilya Depolama">Mobilya Depolama</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Sehpa">Sehpa</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Koltuk">Koltuk</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aksesuarlar">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Dekoratif Objeler">Dekoratif Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Şişeler Vazolar">Şişeler Vazolar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Şömine">Şömine</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bioethanol şöminer">Bioethanol şöminer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="menu-has-sub"><a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=205" title="GREENMALL EXCLUSİVE">GREENMALL EXCLUSİVE</a>
+                        <div class="main-sub-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="main-sub-menu-left">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Greenmall Exclusive Anasayfa">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/green-mall-exclusive-ana-sayfa-mm.png" alt="Greenmall Exclusive Anasayfa" />
+                                                    </div>
+                                                    <span>Greenmall Exclusive Anasayfa</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Yeni Gelenler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/yeni-gelenler-mm.png" alt="Yeni Gelenler" />
+                                                    </div>
+                                                    <span>Yeni Gelenler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Çok Satanlar">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/cok-satanlar-mm.png" alt="Çok Satanlar" />
+                                                    </div>
+                                                    <span>Çok Satanlar</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="İndirimli Ürünler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/indirimli-urunler-mm.png" alt="İndirimli Ürünler" />
+                                                    </div>
+                                                    <span>İndirimli Ürünler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Hediye Önerileri">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/hediye-urunleri-mm.png" alt="Hediye Önerileri" />
+                                                    </div>
+                                                    <span>Hediye Önerileri</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="main-sub-menu-right">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Saksı & Sepetler">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Güneş Saati">Güneş Saati</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Heykeller">Heykeller</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Meyve Objeleri">Meyve Objeleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Objeler">Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Posta Kutuları">Posta Kutuları</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Rüzgar Gülleri">Rüzgar Gülleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Süs Havuzlar">Süs Havuzlar</a>
+                                            </li>
+                                           
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gazlı Mumlar">Gazlı Mumlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gemici Fenerleri">Gemici Fenerleri</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Mobilya Depolama">Mobilya Depolama</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Sehpa">Sehpa</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Koltuk">Koltuk</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aksesuarlar">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Dekoratif Objeler">Dekoratif Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Şişeler Vazolar">Şişeler Vazolar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Şömine">Şömine</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bioethanol şöminer">Bioethanol şöminer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="menu-has-sub"><a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=199" title="OUTDOOR">OUTDOOR</a>
+                        <div class="main-sub-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="main-sub-menu-left">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Outdoor Anasayfa">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/outdoor-ana-sayfa-mm.png" alt="Outdoor Anasayfa" />
+                                                    </div>
+                                                    <span>Outdoor Anasayfa</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Yeni Gelenler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/yeni-gelenler-mm.png" alt="Yeni Gelenler" />
+                                                    </div>
+                                                    <span>Yeni Gelenler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Çok Satanlar">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/cok-satanlar-mm.png" alt="Çok Satanlar" />
+                                                    </div>
+                                                    <span>Çok Satanlar</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="İndirimli Ürünler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/indirimli-urunler-mm.png" alt="İndirimli Ürünler" />
+                                                    </div>
+                                                    <span>İndirimli Ürünler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Hediye Önerileri">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/hediye-urunleri-mm.png" alt="Hediye Önerileri" />
+                                                    </div>
+                                                    <span>Hediye Önerileri</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="main-sub-menu-right">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Saksı & Sepetler">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Güneş Saati">Güneş Saati</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Heykeller">Heykeller</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Meyve Objeleri">Meyve Objeleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Objeler">Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Posta Kutuları">Posta Kutuları</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Rüzgar Gülleri">Rüzgar Gülleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Süs Havuzlar">Süs Havuzlar</a>
+                                            </li>
+                                           
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gazlı Mumlar">Gazlı Mumlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gemici Fenerleri">Gemici Fenerleri</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Mobilya Depolama">Mobilya Depolama</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Sehpa">Sehpa</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Koltuk">Koltuk</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aksesuarlar">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Dekoratif Objeler">Dekoratif Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Şişeler Vazolar">Şişeler Vazolar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Şömine">Şömine</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bioethanol şöminer">Bioethanol şöminer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="menu-has-sub"><a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=214" title="YENİLİKLER">YENİLİKLER</a>
+                        <div class="main-sub-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="main-sub-menu-left">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Yenilikler Anasayfa">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/dis-mekan-ana-sayfa-mm.png" alt="Yenilikler Anasayfa" />
+                                                    </div>
+                                                    <span>Yenilikler Anasayfa</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Yeni Gelenler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/yeni-gelenler-mm.png" alt="Yeni Gelenler" />
+                                                    </div>
+                                                    <span>Yeni Gelenler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Çok Satanlar">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/cok-satanlar-mm.png" alt="Çok Satanlar" />
+                                                    </div>
+                                                    <span>Çok Satanlar</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="İndirimli Ürünler">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/indirimli-urunler-mm.png" alt="İndirimli Ürünler" />
+                                                    </div>
+                                                    <span>İndirimli Ürünler</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Hediye Önerileri">
+                                                    <div class="mm-icon">
+                                                        <img src="file:///C:/Users/90532/Desktop/demo-site-greenmall/hediye-urunleri-mm.png" alt="Hediye Önerileri" />
+                                                    </div>
+                                                    <span>Hediye Önerileri</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="main-sub-menu-right">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Saksı & Sepetler">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Güneş Saati">Güneş Saati</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Heykeller">Heykeller</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Meyve Objeleri">Meyve Objeleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Objeler">Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Posta Kutuları">Posta Kutuları</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Rüzgar Gülleri">Rüzgar Gülleri</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Süs Havuzlar">Süs Havuzlar</a>
+                                            </li>
+                                           
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Aydınlatma">Aydınlatma</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gazlı Mumlar">Gazlı Mumlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gemici Fenerleri">Gemici Fenerleri</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bitkiler">Bitkiler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Doğal Taşlar">Doğal Taşlar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Mobilya Depolama">Mobilya Depolama</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Sehpa">Sehpa</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Koltuk">Koltuk</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Aksesuarlar">Aksesuarlar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Mumluklar">Mumluklar</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Dekoratif Objeler">Dekoratif Objeler</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Şişeler Vazolar">Şişeler Vazolar</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Şömine">Şömine</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Bioethanol şöminer">Bioethanol şöminer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="main">
+
+
+        <div class="container carousel main-slider one">
+            <!-- Carousel -->
+
+            <div id="slideshow0" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+
+                    <button type="button" data-bs-target="#slideshow0" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#slideshow0" data-bs-slide-to="1" class="active"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/slider-1184x533.jpg"
+                            alt="Los Angeles" class="d-block" style="width: 100%" />
+
+                        <div class="card" style="width: 400px">
+                            <div class="card-body">
+                                <h3 class="card-title">Quadro Sicilia Toprak Saksı</h3>
+                                <p class="card-text">
+                                </p>
+                                <p class="product-title">
+                                    <img src="/catalog/view/theme/nar/image/turuncu.png" alt="turuncu" /> Cassetta Olive
+                                    40 cm
+                                </p>
+                                <p class="toprak">Toprak Saksı</p>
+                                <p class="product-price">1448₺</p>
+                                <br />
+                                <a href="#" class="start">Alışverişe Başla</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/slider-1184x533.jpg"
+                            alt="Los Angeles" class="d-block" style="width: 100%" />
+
+                        <div class="card" style="width: 400px">
+                            <div class="card-body">
+                                <h3 class="card-title">Quadro Sicilia Toprak Saksı</h3>
+                                <p class="card-text">
+                                </p>
+                                <p class="product-title">
+                                    <img src="/catalog/view/theme/nar/image/turuncu.png" alt="turuncu" /> Cassetta Olive
+                                    40 cm
+                                </p>
+                                <p class="toprak">Toprak Saksı</p>
+                                <p class="product-price">1448₺</p>
+                                <br />
+                                <a href="#" class="start">Alışverişe Başla</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#slideshow0" data-bs-slide="prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slideshow0" data-bs-slide="next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+
+
+        <div class="container icon-slider two">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=59_71">
+                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/somine-83x83.png"
+                                alt="Şömineler" />
+                            <p>Şömineler</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=59_74">
+                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/saksi-icon-83x83.png"
+                                alt="Saksılar" />
+                            <p>Saksılar</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a
+                            href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=98_99_100">
+                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/bahce-dolap-83x83.png"
+                                alt="Bahçe Dolapları" />
+                            <p>Bahçe Dolapları</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=189">
+                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/evcil-hayvan-83x83.png"
+                                alt="Evcil Dostlar" />
+                            <p>Evcil Dostlar</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a
+                            href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=59_88_89">
+                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/mum-83x83.png"
+                                alt="Mumlar" />
+                            <p>Mumlar</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a
+                            href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=98_136">
+                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/sepet-83x83.png"
+                                alt="Sepetler" />
+                            <p>Sepetler</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.greenmall.websunum.com.tr/index.php?route=product/category&amp;path=213">
+                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/deniz-83x83.png"
+                                alt="Deniz Ekipmanları" />
+                            <p>Deniz Ekipmanları</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/mangal-83x83.png"
+                                alt="Mangallar" />
+                            <p>Mangallar</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="icon-button-prev">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="icon-button-next">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+
+        <div class="container three">
+            <div class="week">
+                <h3>Yeni Ürünler</h3>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a
+                                href="https://www.greenmall.websunum.com.tr/index.php?route=product/product&amp;product_id=124">
+                                <img class="ates-cukuru"
+                                    src="https://www.greenmall.websunum.com.tr/image/cache/catalog/aa-550x550-200x200.jpg"
+                                    alt="Eileen S , Black Askılı" />
+                                <div class="">
+                                    <h3>Eileen S , Black Askılı</h3>
+                                    <p class="fs-2">429,00₺</p>
+                                    <p class="description">
+                                        Ürün İsmi: Eileen S , Black AskılıEbatlar:Dış Çap&nbsp; &nbsp; &nbsp;
+                                        &nbsp;:22cm&nbsp;İç Çap&nbsp; ..
+                                    </p>
+                                    <div class="buy-button" onclick="cart.add('124');">Sepete Ekle</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://www.greenmall.websunum.com.tr/index.php?route=product/product&amp;product_id=123">
+                                <img class="ates-cukuru"
+                                    src="https://www.greenmall.websunum.com.tr/image/cache/catalog/sky-planter-58e8-550x550h-200x200.jpg"
+                                    alt="Sky Planter - Ters Saksı" />
+                                <div class="">
+                                    <h3>Sky Planter - Ters Saksı</h3>
+                                    <p class="fs-2">117,00₺</p>
+                                    <p class="description">
+                                        Ürün Adı : Sky PlanterSaksı Yüksekliği : 13cmSaksı Ağız Çapı: 9,5cmBitki Dikim
+                                        Yuvası Yüksekliği: 6,..
+                                    </p>
+                                    <div class="buy-button" onclick="cart.add('123');">Sepete Ekle</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://www.greenmall.websunum.com.tr/index.php?route=product/product&amp;product_id=122">
+                                <img class="ates-cukuru"
+                                    src="https://www.greenmall.websunum.com.tr/image/cache/catalog/elmas-saksi-03-1aab-550x550-200x200.jpg"
+                                    alt="Elmas Saksı 03" />
+                                <div class="">
+                                    <h3>Elmas Saksı 03</h3>
+                                    <p class="fs-2">12,00₺</p>
+                                    <p class="description">
+                                        Ürün İsmi: Elmas Beton Saksı 03Ölçüler: 9,5 cm / 9,2 cm / 9
+                                        cmAçıklama:&nbsp;Dekoratif beton saksıdı..
+                                    </p>
+                                    <div class="buy-button" onclick="cart.add('122');">Sepete Ekle</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://www.greenmall.websunum.com.tr/index.php?route=product/product&amp;product_id=121">
+                                <img class="ates-cukuru"
+                                    src="https://www.greenmall.websunum.com.tr/image/cache/catalog/IMG_3648-K-550x550-200x200.jpg"
+                                    alt="Elmas Saksı 05" />
+                                <div class="">
+                                    <h3>Elmas Saksı 05</h3>
+                                    <p class="fs-2">12,00₺</p>
+                                    <p class="description">
+                                        Ürün İsmi: Elmas Beton Saksı 5Ölçüler: 10 cm x 9,7 cm&nbsp;İç Hazne Ölçüleri : 8
+                                        cm x 7 cmYükseklik ..
+                                    </p>
+                                    <div class="buy-button" onclick="cart.add('121');">Sepete Ekle</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://www.greenmall.websunum.com.tr/index.php?route=product/product&amp;product_id=120">
+                                <img class="ates-cukuru"
+                                    src="https://www.greenmall.websunum.com.tr/image/cache/catalog/Kalp-550x550-200x200.jpg"
+                                    alt="Dekoratif Beton Kalp Kap / Saksı" />
+                                <div class="">
+                                    <h3>Dekoratif Beton Kalp Kap / Saksı</h3>
+                                    <p class="fs-2">535,00₺</p>
+                                    <p class="description">
+                                        Ürün İsmi: Dekoratif Beton Kalp Kap / SaksıEbatlar: En: 40cm / Boy: 40cm /İç
+                                        Hazne Ölçüsü : 37 cm X ..
+                                    </p>
+                                    <div class="buy-button" onclick="cart.add('120');">Sepete Ekle</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid full-background seven">
+            <div class="container">
+                <div class="collection">
+                    <div class="row">
+                        <div class="col-3 koleksiyon-yazi">
+                            <h3>Aksesuar Koleksiyonunu Keşfedin</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud.
+                            </p>
+                            <button class="review">Tümünü İncele</button>
+                        </div>
+                        <div class="col-12 swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a
+                                        href="https://www.greenmall.websunum.com.tr/index.php?route=product/product&amp;product_id=61">
+                                        <div class="kare-koleksiyon">
+                                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/aspen-beton-sehpa-1-200x200.jpg"
+                                                alt="Aspen Beton Sehpa 3" title="Aspen Beton Sehpa 3" />
+                                        </div>
+                                        <p class="no1">Aspen Beton Sehpa 3</p>
+                                        <p class="fener kart-title">Hafiftir, taşınması ve yer değiştirmesi son derece
+                                            kolaydır,Ahşap mobilyalar gibi zaman içinde çatla..</p>
+                                        <p class="fiyat ürün-price">1.847,00₺</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a
+                                        href="https://www.greenmall.websunum.com.tr/index.php?route=product/product&amp;product_id=124">
+                                        <div class="kare-koleksiyon">
+                                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/aa-550x550-200x200.jpg"
+                                                alt="Eileen S , Black Askılı" title="Eileen S , Black Askılı" />
+                                        </div>
+                                        <p class="no1">Eileen S , Black Askılı</p>
+                                        <p class="fener kart-title">Ürün İsmi: Eileen S , Black AskılıEbatlar:Dış
+                                            Çap&nbsp; &nbsp; &nbsp; &nbsp;:22cm&nbsp;İç Çap&nbsp; ..</p>
+                                        <p class="fiyat ürün-price">429,00₺</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a
+                                        href="https://www.greenmall.websunum.com.tr/index.php?route=product/product&amp;product_id=123">
+                                        <div class="kare-koleksiyon">
+                                            <img src="https://www.greenmall.websunum.com.tr/image/cache/catalog/sky-planter-58e8-550x550h-200x200.jpg"
+                                                alt="Sky Planter - Ters Saksı" title="Sky Planter - Ters Saksı" />
+                                        </div>
+                                        <p class="no1">Sky Planter - Ters Saksı</p>
+                                        <p class="fener kart-title">Ürün Adı : Sky PlanterSaksı Yüksekliği : 13cmSaksı
+                                            Ağız Çapı: 9,5cmBitki Dikim Yuvası Yüksekliği: 6,..</p>
+                                        <p class="fiyat ürün-price">117,00₺</p>
+                                    </a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection-nav-container">
+                        <div class="collection-button-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
+                                fill="none">
+                                <circle cx="17" cy="17" r="16" stroke="white" stroke-opacity="0.6" />
+                                <path opacity="0.6" d="M13 17L20.5 12.6699L20.5 21.3301L13 17Z" fill="white" />
+                            </svg>
+                        </div>
+                        <div class="collection-button-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
+                                fill="none">
+                                <circle cx="17" cy="17" r="16" transform="rotate(-180 17 17)" stroke="white"
+                                    stroke-opacity="0.6" />
+                                <path d="M21 17L13.5 21.3301L13.5 12.6699L21 17Z" fill="#CED4DA" />
+                                <!-- <path opacity="0.6" d="M13 17L20.5 12.6699L20.5 21.3301L13 17Z" fill="white"/> -->
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="container five">
+            <div class="product-month">
+                <div class="row">
+                    <div class="col-7">
+                        <img class="w-100" src="/catalog/view/theme/nar/image/mangal.png" alt="mangal" />
+                    </div>
+                    <div class="col-5">
+                        <h3 class="baslik">Ayın Ürünü</h3>
+                        <h5 class="product-name">Kamado Seramik Mangal 40 cm</h5>
+                        <span class="new-price">21.169₺ </span><span class="old-price">24.544₺</span>
+                        <p class="product-paragraph">Açık havada mangal yapmanın geleceği</p>
+                        <ul>
+                            <li>Dökme demir ayaklı birinci sınıf 13.5 inç seramik ızgara</li>
+                            <li>150 inç kare pişirme alanı</li>
+                            <li>Paslanmaz çelik menteşeli pişirme ızgarası, pişirirken kömür eklemenizi sağlar</li>
+                            <li>Her sıcaklıkta dumanı ve nemi hapseden kalın cidarlı, ısıya dayanıklı kabuk</li>
+                            <li>Sıcaklık kontrolü için dökme demir havalandırma</li>
+                        </ul>
+                        <button class="cart-button">Sepete Ekle</button>
+                        <button class="buy-product">Satın Al</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container six">
+            <div class="methods">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-2 d-flex align-items-center flex-column">
+                        <div class="daire">
+                            <img src="/catalog/view/theme/nar/image/advantages-icon-1.png" alt="icon" />
+                        </div>
+                        <h4>Hızlı Teslimat</h4>
+                    </div>
+                    <div class="col-lg-2 d-flex align-items-center flex-column">
+                        <div class="daire">
+                            <img src="/catalog/view/theme/nar/image/advantages-icon-2.png" alt="icon" />
+                        </div>
+                        <h4>Güvenli Ödeme</h4>
+                    </div>
+                    <div class="col-lg-2 d-flex align-items-center flex-column">
+                        <div class="daire">
+                            <img src="/catalog/view/theme/nar/image/advantages-icon-3.png" alt="icon" />
+                        </div>
+                        <h4>Sipariş Takibi</h4>
+                    </div>
+                    <div class="col-lg-2 d-flex align-items-center flex-column">
+                        <div class="daire">
+                            <img src="/catalog/view/theme/nar/image/advantages-icon-4.png" alt="icon" />
+                        </div>
+                        <h4>Hediye</h4>
+                    </div>
+                    <div class="col-lg-2 d-flex align-items-center flex-column">
+                        <div class="daire">
+                            <img src="/catalog/view/theme/nar/image/advantages-icon-5.png" alt="icon" />
+                        </div>
+                        <h4>Kolay İade</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container eight">
+            <div class="points">
+                <h3>Satış Noktalarımız</h3>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#">
+                            <div class="points-img">
+                                <img src="/catalog/view/theme/nar/image/yalova.png" alt="yalova" />
+                            </div>
+                            <h4>Yalova</h4>
+                            <p>Koruköy Merkez Bucağı, Hürriyet Mah. Çay Kenarı Cad. No:41, Çınarcık/YALOVA</p>
+                            <p><a href="tel:+905494648696">0(549) 464 86 96</a></p>
+                            <p><a href="mailto:yalovafidanlik@isikpeyzaj.com">yalovafidanlik@isikpeyzaj.com</a></p>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#">
+                            <div class="points-img">
+                                <img src="/catalog/view/theme/nar/image/riva.png" alt="riva" />
+                            </div>
+                            <h4>Riva</h4>
+                            <p>Paşamandıra Köyü, Yeni Mah. Parsel No: 15, Riva, Beykoz/İSTANBUL</p>
+                            <p><a href="tel:+902164333242">0(216) 433 32 42</a></p>
+                            <p><a href="mailto:fidanlik@isikpeyzaj.com">fidanlik@isikpeyzaj.com</a></p>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#">
+                            <div class="points-img">
+                                <img src="/catalog/view/theme/nar/image/bodrum.png" alt="bodrum" />
+                            </div>
+                            <h4>Bodrum</h4>
+                            <p>Gölköy Mah. Denizli Cd. No:86 Bodrum/Muğla</p>
+                            <p><a href="tel:+905380563992">0(538) 056 39 92</a></p>
+                            <p><a href="mailto:bodrumfidanlik@isikpeyzaj.com">bodrumfidanlik@isikpeyzaj.com</a></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <a href="#">
+                            <div class="points-img">
+                                <img src="/catalog/view/theme/nar/image/trendyol-logo.png" alt="yalova" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#">
+                            <div class="points-img">
+                                <img src="/catalog/view/theme/nar/image/hepsiburada-logo.png" alt="yalova" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#">
+                            <div class="points-img">
+                                <img src="/catalog/view/theme/nar/image/amazon-logo.png" alt="yalova" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#">
+                            <div class="points-img">
+                                <img src="/catalog/view/theme/nar/image/ciceksepeti-logo.png" alt="yalova" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container ten">
+            <div class="story">
+                <h3>En Çok Okunan Hikayelerimiz</h3>
+                <div class="row">
+                    <div class="col-8">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <button class="review2">Tümünü İncele</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#">
+                            <img src="/catalog/view/theme/nar/image/story1.png" alt="1" />
+                            <div class="date-read">
+                                <span class="date">27 Haz. 2023</span>
+                                <span class="read-time">3 dakikalık okuma</span>
+                            </div>
+                            <p class="detay">Doğaya Yakın Bir Deneyim için Bahçe ve Bitki Yetiştirme Rehberi</p>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#">
+                            <img src="/catalog/view/theme/nar/image/story2.png" alt="2" />
+                            <div class="date-read">
+                                <span class="date">3 Mar. 2023</span>
+                                <span class="read-time">3 dakikalık okuma</span>
+                            </div>
+                            <p class="detay">Fiberstone Saksılar: Bahçelerden Evlere Estetik ve Dayanıklı Çözüm.</p>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#">
+                            <img src="/catalog/view/theme/nar/image/story3.png" alt="3" />
+                            <div class="date-read">
+                                <span class="date">10 Tem. 2023</span>
+                                <span class="read-time">3 dakikalık okuma</span>
+                            </div>
+                            <p class="detay">Evde Kaktüs Bakımı Nasıl Yapılır?</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container ten">
+            <div class="galeri">
+                <div class="row row-cols-1 row-cols-md-5 g-5">
+                    <div class="col item">
+                        <a href="#">
+                            <img src="/catalog/view/theme/nar/image/birinci.png" alt="1" />
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="col item">
+                        <a href="#">
+                            <img src="/catalog/view/theme/nar/image/besinci .png" alt="2" />
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="col item">
+                        <a href="#">
+                            <img src="/catalog/view/theme/nar/image/3..png" alt="3" />
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="col item">
+                        <a href="#">
+                            <img src="/catalog/view/theme/nar/image/ucuncu.png" alt="4" />
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="col item">
+                        <a href="#">
+                            <img src="/catalog/view/theme/nar/image/dorduncu.png" alt="5" />
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer text-white">
+                <div class="row row-cols-1 row-cols-md-5 mt-4 g-5">
+                    <div class="col-6">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#">
+                                    <img class="gm-logo" src="/catalog/view/theme/nar/image/footerlogo.png"
+                                        alt="footerlogo" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#">
+                                    <h5>KATEGORİLER</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">İç mekan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Dış Mekan</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Bakım Ekipmanları</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Bahçe Düzenleme</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Evcil Dostlar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Deniz Ekipmanları</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Hediyelik</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Çocuk</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Uzman Tavsiyesi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">İletişim</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#">
+                                    <h5>MARKALAR</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Deroma</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Hieta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Toomax</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Huugy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Teraplast</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Garden Life</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Esschert</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Aras Metal</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#">
+                                    <h5>YARDIM</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Sıkça Sorulan Sorular</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">İşlem Rehberi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Teslimat Hakkında</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Satış Sözleşmesi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Banka Bilgileri</a>
+                            </li>
+                            <li class="nav-item phone-number">
+                                <a href="#" class="nav-link">+90 (216) 693 23 23</a>
+                            </li>
+                            <li class="nav-item bold-title">
+                                <a href="#" class="nav-link">Kolay İade</a>
+                            </li>
+                            <li class="nav-item bold-title">
+                                <a href="#" class="nav-link">Sipariş Takibi</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#">
+                                    <h5>GREENMALL</h5>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Kurumsal Satış</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Toptan Satış</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Sosyal Sorumluluk</a>
+                            </li>
+                            <li class="nav-item">
+                                <img class="qr" src="/catalog/view/theme/nar/image/qr.png" alt="qr" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="contact text-white">
+                <div class="row">
+                    <div class="col-4 social">
+                        <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+                    </div>
+                    <div class="col-4 iki">
+                        <p class="bulten">HABER BÜLTENİMİZE ABONE OL!</p>
+                        <p class="bulten2">
+                            Yıl boyunca tüm haberlere ve indirimlere erişin ve alışverişe
+                            başlayın
+                        </p>
+                    </div>
+                    <div class="col-4 uc">
+                        <p class="mail">Mail Adresiniz</p>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="8" viewBox="0 0 40 8"
+                                fill="none">
+                                <path
+                                    d="M39.3536 4.35356C39.5488 4.15829 39.5488 3.84171 39.3536 3.64645L36.1716 0.464469C35.9763 0.269207 35.6597 0.269207 35.4645 0.464469C35.2692 0.659731 35.2692 0.976314 35.4645 1.17158L38.2929 4L35.4645 6.82843C35.2692 7.02369 35.2692 7.34027 35.4645 7.53554C35.6597 7.7308 35.9763 7.7308 36.1716 7.53554L39.3536 4.35356ZM-4.37114e-08 4.5L39 4.5L39 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left text-white">
+                    <p>©2023 Işık Peyzaj - Her Hakkı Saklıdır</p>
+                </div>
+                <div class="bottom-right ms-0">
+                    <a href="#">KVKK ve Gizlilik Politikası</a>
+                    <a href="#">Çerez Tercihleri</a>
+                    <a href="#">Kullanım Koşulları</a>
+                </div>
+            </div>
+            <div class="butterfly">
+                <img class="kelebek" src="/catalog/view/theme/nar/image/kelebek.png" alt="kelebek" />
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/catalog/view/theme/nar/stylesheet/homescript.js" type="text/javascript"></script>
+    <!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+</body>
+
+</html>

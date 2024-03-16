@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenMall</title>
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+
+  <!-- <link rel="stylesheet" href="css/owl.carousel.min.css" /> -->
+  <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css"
+    /> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <!-- CSS Only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a7148fea42.js" crossorigin="anonymous"></script>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="container-fluid p-0">
+      <div class="yazi text-white">
+        <p>100₺ ve Üzeri Alışverişlerinizde Kargo Ücretsiz</p>
+      </div>
+    </div>
+    <div class="container-fluid p-0">
+      <p class="infinite-text">
+        <span>NATURE UP YOUR LIFE • NATURE UP YOUR LIFE • NATURE UP YOUR LIFE •
+          NATURE UP YOUR LIFE • NATURE UP YOUR LIFE • NATURE UP YOUR LIFE •
+          NATURE UP YOUR LIFE • NATURE UP YOUR LIFE • NATURE UP YOUR LIFE •
+          NATURE UP YOUR LIFE • NATURE UP YOUR LIFE • NATURE UP YOUR LIFE •
+          &nbsp;</span>
+      </p>
+    </div>
+
+    <div class="container-fluid p-0 header-menu">
+      <div class="row row-cols-1 row-cols-md-5 menu">
+        <div class="col logo">
+          <img class="resim" src="img/logo.png" alt="logo" />
+        </div>
+        <div class="col icons">
+          <a>
+            <i class="fa-brands fa-facebook fa-lg"></i>
+            <i class="fa-brands fa-instagram fa-lg"></i>
+            <i class="fa-brands fa-youtube fa-lg"></i>
+          </a>
+        </div>
+        <div class="col bar">
+          <form>
+            <input class="search-bar" type="text" placeholder="Ara..." />
+            <a href="#">
+              <i class="fa-solid fa-magnifying-glass arama"></i>
+            </a>
+          </form>
+        </div>
+        <div class="col location mt-4">
+          <a href="#"><i class="fa-solid fa-location-dot"></i>Satış Noktalarımız</a>
+        </div>
+        <div class="col right">
+          <!-- <a href="#"><i class="fa-regular fa-user"></i>Giriş Yap</a> -->
+          <div class="login">
+            <a href="#"><i class="fa-regular fa-user"></i>Giriş Yap</a>
+
+            <div class="login-menu">
+              <button class="giris-html">
+                <p>Giriş Yap</p>
+              </button>
+              <div class="hr">
+                <hr />
+                <p>VEYA</p>
+                <hr />
+              </div>
+
+              <button class="uye-ol-html">
+                <p>Üye Ol</p>
+              </button>
+              <hr />
+              <div class="siparisTakip">
+                <img src="img/Frame.png" alt="frame" />
+                <p>Sipariş Takip</p>
+              </div>
+            </div>
+          </div>
+          <a href="#"><i class="fa-regular fa-heart"></i>Favorilerim</a>
+          <a href="#" onclick="togglecart();"><i class="fa-solid fa-cart-shopping"></i>Sepetim</a>
+        </div>
+      </div>
+      <div class="container-fluid p-0 kategori">
+        <a href="#">İç Mekan</a>
+        <a href="#">Dış Mekan</a>
+        <a href="#">Bakım Ekipmanları</a>
+        <a href="#">Bahçe Düzenleme ve Bahçe Hizmetlerimiz</a>
+        <a href="#">Evcil Dostlar</a>
+        <a href="#">Deniz Ekipmanları</a>
+        <a href="#">Hediyelik</a>
+        <a href="#">Çocuk</a>
+        <a href="#">Uzman Tavsiyesi</a>
+        <a href="#">İletişim</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+
+  <div class="payment-info">
+    <div class="payment-info-head">
+      <div class="container">
+        <div class="row">
+          <div class="secure-payment">
+            <div class="sec-pay-icon">
+              <img src="nortonseal.png" alt="Norton powered by digicert">
+            </div>
+            <span>
+              Güvenli Ödeme
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="payment-info-content">
+      <div class="container">
+        <div class="row">
+          <div class="order-made">
+            <div class="om-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <path d="M28 3.5C14.4703 3.5 3.5 14.4703 3.5 28C3.5 41.5297 14.4703 52.5 28 52.5C41.5297 52.5 52.5 41.5297 52.5 28C52.5 14.4703 41.5297 3.5 28 3.5ZM38.582 19.9992L27.0648 35.968C26.9039 36.1926 26.6917 36.3757 26.4458 36.502C26.2 36.6283 25.9276 36.6942 25.6512 36.6942C25.3748 36.6942 25.1024 36.6283 24.8565 36.502C24.6107 36.3757 24.3985 36.1926 24.2375 35.968L17.418 26.518C17.2102 26.2281 17.418 25.8234 17.7734 25.8234H20.3383C20.8961 25.8234 21.4266 26.0914 21.7547 26.5508L25.6484 31.9539L34.2453 20.032C34.5734 19.5781 35.0984 19.3047 35.6617 19.3047H38.2266C38.582 19.3047 38.7898 19.7094 38.582 19.9992Z" fill="#006548"/>
+                </svg>
+            </div>
+            <div class="om-title">
+              Siparişin Alındı
+            </div>
+            <div class="om-code">
+              <div class="om-number">
+                <span>Sipariş No:</span>
+                <span>1022587850</span>
+              </div>
+              <div class="om-copy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <g clip-path="url(#clip0_885_5696)">
+                    <path
+                      d="M10.2891 0H3.11049C3.05156 0 3.00335 0.0482143 3.00335 0.107143V0.857143C3.00335 0.916071 3.05156 0.964286 3.11049 0.964286H9.75335V10.1786C9.75335 10.2375 9.80156 10.2857 9.86049 10.2857H10.6105C10.6694 10.2857 10.7176 10.2375 10.7176 10.1786V0.428571C10.7176 0.191518 10.5261 0 10.2891 0ZM8.57478 1.71429H1.71763C1.48058 1.71429 1.28906 1.9058 1.28906 2.14286V9.25045C1.28906 9.36429 1.3346 9.47277 1.41496 9.55313L3.73594 11.8741C3.7654 11.9036 3.79888 11.9277 3.83505 11.9478V11.9732H3.89129C3.93817 11.9906 3.98772 12 4.03862 12H8.57478C8.81183 12 9.00335 11.8085 9.00335 11.5714V2.14286C9.00335 1.9058 8.81183 1.71429 8.57478 1.71429ZM3.83371 10.6098L2.68058 9.45536H3.83371V10.6098ZM8.03906 11.0357H4.69085V9.13393C4.69085 8.83795 4.45112 8.59821 4.15513 8.59821H2.25335V2.67857H8.03906V11.0357Z"
+                      fill="#495057" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_885_5696">
+                      <rect width="12" height="12" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="om-steps">
+              <div class="om-step-item om-step-item-active">
+                Siparişin Alındı<i></i>
+              </div>
+              <div class="om-step-item">
+                Siparişin Hazırlanıyor<i></i>
+              </div>
+              <div class="om-step-item">
+                Kargoya Verildi<i></i>
+              </div>
+              <div class="om-step-item">
+                Teslim Edildi<i></i>
+              </div>
+            </div>
+            <div class="om-steps-desc">
+              <div class="om-steps-desc-inner">
+                Sipariş bilgilerini içeren e-posta birkaç dakika içinde <a
+                  href="mailto:akfato@yahoo.com">akfato@yahoo.com</a> adresine ulaşacaktır.Gelen kutunu ve spam kutunu
+                kontrol edebilirsin.
+              </div>
+            </div>
+            <div class="om-buttons">
+              <div class="om-button">
+                <a href="#" title="ANASAYFAYA DÖN">ANASAYFAYA DÖN</a>
+              </div>
+              <div class="om-button">
+                <a href="#" title="SİPARİŞLERİME GİT">SİPARİŞLERİME GİT</a>
+              </div>
+            </div>
+            <div class="om-products">
+              <div class="om-products-title">
+                Ürünlerim
+              </div>
+              <div class="om-products-list">
+                <div class="om-product-item">
+                  <div class="om-product-img">
+                    <img src="img/acer-ates-cukuru-b.png"
+                      alt="Esschert Acer Ateş Çukuru - Fire Bowl Laser Cut Leaves Rust">
+                  </div>
+                  <div class="om-product-desc">
+                    <div class="om-product-desc-row">
+                      <div class="om-product-brand">
+                        Esschert
+                      </div>
+                    </div>
+                    <div class="om-product-desc-row">
+                      <div class="om-product-title">
+                        Acer Ateş Çukuru - Fire Bowl Laser Cut Leaves Rust
+                      </div>
+                      <div class="om-product-price">
+                        14.004,36 ₺
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="om-boxes">
+              <div class="om-box">
+               <div class="om-box-inner">
+                <div class="om-box-title">
+                  Teslimat Adresi
+                </div>
+                <div class="om-box-address">
+                  <div class="om-box-address-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                      <g clip-path="url(#clip0_885_5787)">
+                        <path
+                          d="M9.70268 2.76427C9.47155 2.23131 9.13831 1.74876 8.72176 1.34385C8.30385 0.935276 7.81118 0.610995 7.27065 0.388714C6.70837 0.155455 6.11172 0.0375977 5.49665 0.0375977C4.88159 0.0375977 4.28493 0.155455 3.72266 0.387486C3.17879 0.612151 2.69141 0.933803 2.27154 1.34262C1.85526 1.74776 1.52206 2.23026 1.29062 2.76304C1.05123 3.3155 0.929688 3.90233 0.929688 4.50635C0.929688 5.37309 1.13717 6.23615 1.54475 7.06851C1.87254 7.7376 2.33047 8.38949 2.90748 9.00947C3.8933 10.0677 4.92701 10.7147 5.22042 10.8878C5.30371 10.937 5.3987 10.9629 5.49542 10.9627C5.59118 10.9627 5.68571 10.9382 5.77042 10.8878C6.06384 10.7147 7.09755 10.0677 8.08337 9.00947C8.66038 8.39072 9.1183 7.7376 9.44609 7.06851C9.85614 6.23737 10.0636 5.37554 10.0636 4.50758C10.0636 3.90356 9.94208 3.31673 9.70268 2.76427ZM5.49665 10.0211C4.68761 9.50668 1.81362 7.46996 1.81362 4.50758C1.81362 3.55121 2.19542 2.65255 2.88906 1.97487C3.58516 1.29597 4.51083 0.921526 5.49665 0.921526C6.48248 0.921526 7.40815 1.29597 8.10424 1.9761C8.79788 2.65255 9.17969 3.55121 9.17969 4.50758C9.17969 7.46996 6.30569 9.50668 5.49665 10.0211ZM5.49665 2.44385C4.30335 2.44385 3.33594 3.41126 3.33594 4.60456C3.33594 5.79786 4.30335 6.76528 5.49665 6.76528C6.68996 6.76528 7.65737 5.79786 7.65737 4.60456C7.65737 3.41126 6.68996 2.44385 5.49665 2.44385ZM6.46897 5.57688C6.34144 5.70478 6.18989 5.8062 6.02302 5.8753C5.85615 5.94441 5.67726 5.97984 5.49665 5.97956C5.12958 5.97956 4.7846 5.83592 4.52433 5.57688C4.39644 5.44935 4.29502 5.2978 4.22591 5.13093C4.1568 4.96406 4.12137 4.78517 4.12165 4.60456C4.12165 4.23749 4.26529 3.89251 4.52433 3.63224C4.7846 3.37197 5.12958 3.22956 5.49665 3.22956C5.86373 3.22956 6.20871 3.37197 6.46897 3.63224C6.72924 3.89251 6.87165 4.23749 6.87165 4.60456C6.87165 4.97164 6.72924 5.31662 6.46897 5.57688Z"
+                          fill="black" fill-opacity="0.85" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_885_5787">
+                          <rect width="11" height="11" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>Ev
+                  </div>
+                  <div class="om-box-address-desc">
+                    Zümrütevler Mahallesi, Handegül Sokak No:100
+                    34500 Maltepe/İstanbul
+                  </div>
+                </div>
+               </div>
+              </div>
+              <div class="om-box">
+                <div class="om-box-inner">
+                <div class="om-box-title">
+                  Sipariş Özeti
+                </div>
+                <div class="om-box-order-summary">
+                  <div class="om-box-os-row">
+                    <span>Ara Toplam</span>
+                    <span>11.670,30 ₺</span>
+                  </div>
+                  <div class="om-box-os-row">
+                    <span>KDV (%20)</span>
+                    <span>2.334,06 ₺</span>
+                  </div>
+                  <div class="om-box-os-row">
+                    <span>Ürünümü Işık Peyzaj Riva Fidanlığından Teslim Almak İstiyorum:</span>
+                    <span>0,00 ₺</span>
+                  </div>
+                  <div class="om-box-os-total">
+                    <span>Toplam</span>
+                    <span>14.004,36 ₺</span>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="om-box">
+                <div class="om-box-inner">
+                <div class="om-box-title">
+                  Sipariş Özeti
+                </div>
+                <div class="om-box-payment-info">
+                  <div class="om-box-pi-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                      <g clip-path="url(#clip0_885_5815)">
+                      <path d="M12.5357 1.39026H0.464286C0.207478 1.39026 0 1.59774 0 1.85454V11.1403C0 11.3971 0.207478 11.6045 0.464286 11.6045H12.5357C12.7925 11.6045 13 11.3971 13 11.1403V1.85454C13 1.59774 12.7925 1.39026 12.5357 1.39026ZM1.04464 2.4349H11.9554V4.17597H1.04464V2.4349ZM11.9554 10.5599H1.04464V5.45276H11.9554V10.5599ZM8.51674 9.63133H10.9107C10.9746 9.63133 11.0268 9.5791 11.0268 9.51526V8.47062C11.0268 8.40678 10.9746 8.35455 10.9107 8.35455H8.51674C8.4529 8.35455 8.40067 8.40678 8.40067 8.47062V9.51526C8.40067 9.5791 8.4529 9.63133 8.51674 9.63133Z" fill="black" fill-opacity="0.85"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_885_5815">
+                      <rect width="13" height="13" fill="white"/>
+                      </clipPath>
+                      </defs>
+                      </svg>Kredi/Banka Kartı ile Öde
+                  </div>
+                  <div class="om-box-pi-desc">
+                    14.004,36 ₺ Kredi/banka kartı ödemesi ile sipariş verildi.
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="container whatsapp">
+    <a href="https://web.whatsapp.com/" class="float" target="_blank">
+      <i class="fa-brands fa-whatsapp my-float" style="color: #ffffff"></i>
+    </a>
+  </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="container-fluid footer text-white">
+    <div class="row row-cols-1 row-cols-md-5 mt-4 g-5">
+      <div class="col-6">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <img class="gm-logo" src="img/footerlogo.png" alt="footerlogo" />
+          </li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#">
+              <h5>KATEGORİLER</h5>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">İç mekan</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Dış Mekan</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">Bakım Ekipmanları</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Bahçe Düzenleme</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Evcil Dostlar</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Deniz Ekipmanları</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Hediyelik</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Çocuk</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Uzman Tavsiyesi</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">İletişim</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#">
+              <h5>MARKALAR</h5>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Deroma</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Hieta</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Toomax</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Huugy</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Teraplast</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Garden Life</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Esschert</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Aras Metal</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#">
+              <h5>YARDIM</h5>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sıkça Sorulan Sorular</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">İşlem Rehberi</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Teslimat Hakkında</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Satış Sözleşmesi</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Banka Bilgileri</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">+90 (216) 693 23 23</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Kolay İade</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sipariş Takibi</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#">
+              <h5>GREENMALL</h5>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Kurumsal Satış</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Toptan Satış</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sosyal Sorumluluk</a>
+          </li>
+          <li class="nav-item">
+            <img class="kelebek" src="img/kelebek.png" alt="kelebek" />
+          </li>
+          <br /><br />
+          <img class="qr" src="img/qr.png" alt="qr" />
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid contact text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 social">
+          <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+        </div>
+        <div class="col-3 iki">
+          <p class="bulten">HABER BÜLTENİMİZE ABONE OL!</p>
+          <p class="bulten2">
+            Yıl boyunca tüm haberlere ve indirimlere erişin ve alışverişe
+            başlayın
+          </p>
+        </div>
+        <div class="col-3 uc">
+          <p class="mail">Mail Adresiniz</p>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="8" viewBox="0 0 40 8" fill="none">
+              <path
+                d="M39.3536 4.35356C39.5488 4.15829 39.5488 3.84171 39.3536 3.64645L36.1716 0.464469C35.9763 0.269207 35.6597 0.269207 35.4645 0.464469C35.2692 0.659731 35.2692 0.976314 35.4645 1.17158L38.2929 4L35.4645 6.82843C35.2692 7.02369 35.2692 7.34027 35.4645 7.53554C35.6597 7.7308 35.9763 7.7308 36.1716 7.53554L39.3536 4.35356ZM-4.37114e-08 4.5L39 4.5L39 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bottom">
+    <div class="bottom-left text-white">
+      <p>©2023 Işık Peyzaj - Her Hakkı Saklıdır</p>
+    </div>
+    <div class="bottom-right ms-0">
+      <a href="#">KVKK ve Gizlilik Politikası</a>
+      <a href="#">Çerez Tercihleri</a>
+      <a href="#">Kullanım Koşulları</a>
+    </div>
+  </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+
+  <!-- JavaScript -->
+  <!--Uncomment this line-->
+  <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--yeni baslangic-->
+  <script>
+     $(".om-code").click(function () {
+      navigator.clipboard.writeText( $(".om-code span:nth-child(2)").text().trim());
+    }
+    );
+  </script>
+  
+  <!--yeni bitis-->
+  <script>
+    $(".ub-os-calc-link").click(function () {
+      $(".ub-os-calc-form").toggleClass("ub-os-calc-form-showed");
+    }
+    );
+    function togglecart() {
+      $(".fixed-basket").toggleClass("fixed-basket-showed");
+    }
+  </script>
+  <script>
+
+    function toggleDiv() {
+      var input1 = document.getElementById("credit-card");
+      var input2 = document.getElementById("cc-name");
+      var input3 = document.getElementById("cc-date");
+      var input4 = document.getElementById("cc-cvv");
+      if (input1.value !== "" && input2.value !== "" && input3.value !== "" && input4.value !== "") {
+        $(".cc-installment-content").show();
+        $(".credit-card-bottom").hide();
+      } else {
+        $(".cc-installment-content").hide();
+        $(".credit-card-bottom").show();
+      }
+    }
+
+
+
+
+    $(document).ready(function () {
+      var input1 = document.getElementById("credit-card");
+      var input2 = document.getElementById("cc-name");
+      var input3 = document.getElementById("cc-date");
+      var input4 = document.getElementById("cc-cvv");
+      if (input1.value !== "" && input2.value !== "" && input3.value !== "" && input4.value !== "") {
+        $(".cc-installment-content").show();
+        $(".credit-card-bottom").hide();
+      } else {
+        $(".cc-installment-content").hide();
+        $(".credit-card-bottom").show();
+      }
+
+
+
+      var content = $('.payment-info-step.payment-info-step-active .pis-number').text().trim();
+
+      // Check if the content length is greater than 1 character
+      if (content > 1) {
+        // Add a class to a different div with the ID 'otherDiv'
+        $('.pi-summary').addClass('pi-summary-color');
+        $('.pi-summary-btn button').prop('disabled', false)
+      } else {
+        $('.pi-summary').removeClass('pi-summary-color');
+        $('.pi-summary-btn button').prop('disabled', true);
+      }
+    });
+    $(".pis-head").click(function () {
+      if ($(this).closest(".payment-info-step").hasClass("payment-info-step-active")) {
+        $(this).closest(".payment-info-step").removeClass("payment-info-step-active");
+      } else {
+        $(".payment-info-step").removeClass("payment-info-step-active");
+        $(this).closest(".payment-info-step").addClass("payment-info-step-active");
+      }
+      var content = $('.payment-info-step.payment-info-step-active .pis-number').text().trim();
+
+      // Check if the content length is greater than 1 character
+      if (content > 1) {
+        // Add a class to a different div with the ID 'otherDiv'
+        $('.pi-summary').addClass('pi-summary-color');
+        $('.pi-summary-btn button').prop('disabled', false)
+      } else {
+        $('.pi-summary').removeClass('pi-summary-color');
+        $('.pi-summary-btn button').prop('disabled', true);
+      }
+    }
+    );
+    var countChecked = function () {
+      var n = $("#SameasInvoice:checked").length;
+      if (n == 0) {
+        $(".billing-address").addClass("billing-address-showed");
+      } else {
+        $(".billing-address").removeClass("billing-address-showed");
+      }
+    };
+
+    countChecked();
+    $("#SameasInvoice[type=checkbox]").on("click", countChecked);
+    $("#Invoice").on("change", function () {
+      $("select option:selected").each(function () {
+        if ($(this).val() == "Bireysel") {
+          $(".personal-invoice").addClass("invoice-showed");
+          $(".corporate-invoice").removeClass("invoice-showed");
+        } else if ($(this).val() == "Kurumsal") {
+          $(".corporate-invoice").addClass("invoice-showed");
+          $(".personal-invoice").removeClass("invoice-showed");
+        }
+      });
+
+    })
+      .trigger("change");
+
+    $("#credit-card").on("change", function () {
+      toggleDiv();
+      var $outputDiv = $(".credit-card-number");
+      var $inputField = $("#credit-card");
+      var inputValue = $inputField.val();
+
+      if (!isNaN(inputValue)) { // Use 'inputValue' here
+        // If it's a number, write it to the output div
+        $outputDiv.text(inputValue);
+      } else {
+        // If it's not a number, clear the output div
+        $outputDiv.text("");
+      }
+    });
+    $("#cc-name").on("change", function () {
+      toggleDiv()
+      var $outputDiv = $(".credit-card-name");
+      var $inputField = $("#cc-name");
+      var inputValue = $inputField.val();
+      $outputDiv.text(inputValue);
+    });
+
+    $("#cc-date").on("change", function () {
+      toggleDiv()
+      var $outputDiv = $(".credit-card-date");
+      var $inputField = $("#cc-date");
+      var inputValue = $inputField.val();
+
+      if (!isNaN(inputValue)) { // Use 'inputValue' here
+        // If it's a number, write it to the output div
+        $outputDiv.text(inputValue);
+      } else {
+        // If it's not a number, clear the output div
+        $outputDiv.text("");
+      }
+    });
+
+    $("#cc-cvv").on("change", function () {
+      toggleDiv()
+      var $outputDiv = $(".credit-card-date");
+      var $inputField = $("#cc-date");
+      var inputValue = $inputField.val();
+      $outputDiv.text(inputValue);
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>
